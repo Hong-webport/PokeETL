@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="strongvs.css">
+<script src="d3.v3.min.js"></script>
+
+    <div id="typechart">
+      <div id="details">
+      <table class= "legend" id="legend">
+        <thead>
+          <tr>
+            <th colspan="2">Legend<hr></th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Super Effective</td>
+          <td><span class="legend super-effective-against"></span></td>
+        </tr>
+        <tr>
+          <td>Not Very Effective</td>
+          <td><span class="legend not-very-effective-against"></span></td>
+        </tr>
+      </table>
+      </div>
+      <div id="graph"></div>
+      <script>
+        var diameter = 750,
+            radius = diameter / 2,
+            innerRadius = radius - 120;
+    
+        var cluster = d3.layout.cluster()
+            .size([360, innerRadius])
+            .sort(null)
+            .value(function(d) { return d.size; });
+    
+        var bundle = d3.layout.bundle();
+    
+        var line = d3.svg.line.radial()
+            .interpolate("bundle")
+            .tension(0.75)
+            .radius(function(d) { return d.y; })
+            .angle(function(d) { return d.x / 180 * Math.PI; });
+    
+        window.colorPath = function(d, l, type) {
+          var type = type || 'strong';
+          if (type == 'strong') {
+            if (l.target === d) return l.source.target = true;
+          }
+          if (type == 'weak') {
+            if (l.target === d) return l.source.target = true;
+          }
+          return false;
+        }
+      </script>
+      <script src="strongvs.js"></script>
+ 
+    </div>

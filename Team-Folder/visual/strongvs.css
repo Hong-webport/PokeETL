@@ -1,0 +1,92 @@
+body,
+svg {
+    background:#3C6478;
+}
+
+.node {
+    fill: #000;
+ }
+
+.node:hover,
+.node--active {
+    fill: rgba(255, 255, 255, 1);
+}
+
+.weak,
+.strong {
+    stroke: #000;
+    stroke-opacity: 0.1;
+    fill: none;
+    pointer-events: none;
+    z-index: -100;
+    stroke-width: 1px;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation-name: dash;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+.node:hover,
+.node--source,
+.node--target,
+.node--active {
+    font-weight: 700;
+    opacity: 1;
+}
+
+.does-not-affect,
+.not-very-effective-against,
+.super-effective-against,
+.is-weak-against,
+.resists-against{
+    stroke-width: 3px;
+    stroke-opacity: 1;
+    z-index: 99999;
+}
+
+.legend {
+
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.not-very-effective-against {
+    stroke: rgba(219, 7, 7);
+    border-color: rgba(219, 7, 7);
+}
+
+.super-effective-against {
+    stroke: rgba(7, 219, 7);
+    border-color: rgba(7, 219, 7);
+}
+
+
+
+#typechart {
+    margin: auto;
+    text-align: center;
+    width: 1100px;
+}
+
+#details {
+    float: left;
+    color: #f7f7f7;
+    text-align: left;
+}
+
+#graph {
+    width: 750px;
+    float: left;
+}
+
+#is-also-effective-against {
+    display: none;
+}
+
+
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
