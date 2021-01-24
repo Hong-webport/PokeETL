@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ability Tree</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+
+    .node circle {
+      fill: red;
+      stroke: Black;
+      stroke-width: 2px;
+   }
+   
+    .node text {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; font-style: italic; font-weight: 200; font-size:smaller;
+      /* font: 8px Trebuchet MS; */
+    }
+   
+   .link {
+     fill: none;
+     stroke: red;
+     stroke-width: 2px; 
+    }</style>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Skill Treemaps</a>
+    
+    
+
+    
+    <form class="form-inline">
+      <input class="form-control ml-sm-2" type="search" class="form-control" id="Pokemon" placeholder="Your Pokemon" aria-label="Search">
+      <input class="form-control ml-sm-2" type="search" id="Moves" placeholder="Type a Move or #1-796" aria-label="Search">
+      <input class="form-control ml-sm-2" type="search" id="Ability" placeholder="Ability or #1-233" aria-label="Search">
+
+      <button id="submit" type="submit" class="btn btn-warning">Search</button>      
+    </form>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        
+      </div>
+    </div>
+
+  </nav>
+
+  <p><div class="btn-group btn-group-lg" role="group" aria-label="...">
+    <a class="btn btn-danger" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Instructions</a>
+    <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Technique</button>
+    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Ability</button>
+    <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">Sources</button></div>
+
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body"><p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: bold;font-size: large;" > 
+          Search on what you want in the correct search bar. Then clicked on the circle that appeared more info. If you do multiple or begin a new search, You might need to scroll down to see it. See what moves your POKEMON can learn. </div>
+        </p></div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body"><p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: bold;font-size: large;" > 
+          Ability: Passive effect in battle or in the overworld. Individual Pokémon may have only one Ability at a time.</p> 
+          <p> Click on the middle node to see what Pokemon can attain it. </p>
+        
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample3">
+        <div class="card card-body"> <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: bold;font-size: large;" >  Technique/Move: also known as an ATTACK, is the skill Pokémon primarily use in battle.</p>
+          <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: bold;font-size: large;" >
+          Pokemon Type:</p> <p>The technique belong to one type and determine its effectiveness.</p>
+
+          <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: bold;font-size: large;" > Stats: </p>
+          Accuracy:	The percent value of how likely this move is to be successful.<br>
+          Power: The base power of this move with a value of 0 if it does not have a base power.<br>
+          Use Limits:	Power Points. The number of times this move can be used.<br>
+          Effect Chance: the percentage of the likelihood of the effect occurrence.<br> 
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample4">
+        <div class="card card-body"> <p>  POKE-API.CO for the Data. Bulbasaurus for the Info.  bl.ocks.org for the tree map prototype.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- <form class="form-inline"> -->
+        
+        <!-- <button id="submit" type="submit" class="btn btn-default">Ability</button>
+      </form> -->
+
+
+    <!-- <div id="plot"></div> -->
+    <!-- <canvas id="myChart" width="200" height="200"></canvas> -->
+    <div id="my_dataviz"></div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="abbmap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  </body>
+
+  </html>
