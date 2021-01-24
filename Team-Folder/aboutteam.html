@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html ">
+
+<head>
+	<title>Team Triangle - Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="page-container">
+		<div class="content">
+				<div class="main-bg">
+			<!-- title -->
+			<h1 class="shadow">Team Triangle Project Page</h1>
+			<!-- //title -->
+			<div class="sub-main-w3">
+				<div class="image-style">
+				</div>
+<!-- vertical tabs -->
+				<div class="vertical-tab">
+					<div id="section1" class="section-w3ls">
+						<input type="radio" name="sections" id="option1" checked>
+						<label for="option1" class="icon-left-w3pvt"><span class="fa fa-desktop" aria-hidden="true"></span>The Team</label>
+						<article>
+							<form action="#" method="post">
+								<h3 class="legend">What in the world is all of this?<hr></h3>
+								<div>
+									<p></p>Hopefully this will help shed some light on any confusion if you stumbled upon our project’s repo page and can’t figure out what is going on.
+									<br>Team Triangle is a team of students currently enrolled in the Georgia Tech Data Science program. Unlike most sessions in the program, this entire class has happened remotely due to some kind of pandemic. Our four-person team (named after a three-sided object) was chosen by the instructors with an initial deadline of just under 2 weeks to complete. The project(s) on the Git Page were planned, put together, and hosted via Zoom meetings and lots of coffee.								
+									<hr>
+									The final part of this project is a Zoom presentation detailing our work. 
+									<div style="text-align:center;"> 
+									<img src="images/mudkiphelper1.png" alt="Extra Help!" style="width:100px;height:120px" class="center">
+									<p>Wish us luck!</p>
+								</div>
+									</p>
+								</div>
+
+
+							</form>
+						</article>
+					</div>					
+				</div>
+				<!-- //vertical tabs -->
+				<div class="clear"></div>
+			</div>
+		</div>
+		  </div>
+
+<!-- Navigation -->
+<div class="sidebar-menu">
+	<header class="logo"> <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#"> <span id="logo" class="fa fa-angle-double-right fa-5x"></span> </a> 
+	</header>
+  <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+  <div class="menu">
+	  <ul id="menu" >
+	  <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+	  <li><a href="#"><i class="fa fa-floppy-o"></i><span>About</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		<ul>
+		  <li><a href="aboutproject.html">The Project</a></li>
+		  <li><a href="aboutteam.html">Team Triangle</a></li>
+		</ul>
+		</li>
+		<li><a href="#"><i class="fa fa-address-book"></i><span>The Pokedex</span><span class="fa fa-angle-right" style="float: right"></span></a>
+			<ul>
+				<li><a href="pokedexnew.html">Generation 1</a></li>
+				<li><a href="pokedexnew2.html">Generation 2</a></li>
+				<li><a href="pokedexnew3.html">Generation 3</a></li>
+				<li><a href="pokedexnew4.html">Generation 4</a></li>
+				<li><a href="pokedexnew5.html">Generation 5</a></li>
+				<li><a href="pokedexnew6.html">Generation 6</a></li>
+				<li><a href="pokedexnew7.html">Generation 7</a></li>
+				<li><a href="pokedexnew8.html">Generation 8</a></li>
+				<li><a href="pokedexfull.html">Complete Pokedex</a></li>
+				</ul>
+			</li>
+		<li><a href="radarchart.html"><i class="fa fa-bar-chart-o"></i><span>Radar Chart</span></a></li>
+		<li><a href="expcompare.html"><i class="fa fa-bar-chart"></i><span>Experience Compare</span></a></li>
+		<li><a href="abilitytree.html"><i class="fa fa-bar-chart-o"></i><span>Ability Tree</span></a></li>
+	  	<li><a href="bytype.html"><i class="fa fa-pie-chart"></i><span>Pokemon by Types</span></a></li>
+	  	<li><a href="strchart.html"><i class="fa fa-pie-chart"></i><span>Pokemon by Strengths</span></a></li>
+	  	<li><a href="feedback.html"><i class="fa fa-mail-forward"></i><span>Feedback</span></a></li>
+	  </ul>
+	</div>
+  </div>
+  <!-- End Navigation -->
+
+</div>
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script> 
+
+<script>
+  var toggle = true;   
+	$(".sidebar-icon").click(function() {                
+	if (toggle){
+	  $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+	  $("#menu span").css({"position":"absolute"});
+	  }
+	else {
+	  $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+	  setTimeout(function() {
+		$("#menu span").css({"position":"relative"});
+	  }, 400);
+	  }           
+  toggle = !toggle;
+  });
+</script>
+
+</body>
+
+</html>
