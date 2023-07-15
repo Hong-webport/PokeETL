@@ -8,7 +8,7 @@ You can look at more infomation on here https://gitjudd.github.io/teamtriangle/a
 
 #### My Contributions:
 
-In this project, my maib contribution is creating heiracle chart. Other charts in the website displayed the statistic attribute of each pokemon. My chart targeted the story aspects. When a pokemon is captured: I would like to learn what cool moves it can do, how thoses moves can be displayed, is it any good and so forth.
+In this project, my main contribution is creating heiracle chart. Other charts in the website displayed the statistic attribute of each pokemon. My chart targeted the story aspects. When a pokemon is captured: I would like to learn what cool moves it can do, how thoses moves can be displayed, is it any good and so forth.
 
 These charts are hosted and created LIVE. It could be very useful for hosting or looking up any topics in hierarchical classifications or organizations.   
 
